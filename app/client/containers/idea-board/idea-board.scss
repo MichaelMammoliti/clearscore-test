@@ -1,0 +1,56 @@
+.idea-board {
+  display: block;
+
+  &__header {
+    display: block;
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__navigation {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+
+    &__item {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__item {
+    flex: 1 1 auto;
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+// Responsive
+// desktop
+@media (min-width: 1264px) {
+  .idea-board {
+    &__item {
+      max-width: 25%;
+    }
+  }
+}
+
+// tablet
+@media (min-width: 768px) and (max-width: 1264px) {
+  .idea-board {
+    &__item {
+      max-width: 50%;
+    }
+  }
+}
+
+// mobile
+@media (max-width: 768px) {
+  .idea-board {
+    &__item {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.idea-card {
+  display: block;
+  position: relative;
+
+  >* {
+    padding-top: 10px;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+  }
+
+  &__dates {
+    display: flex;
+
+    >* {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__description {
+    p {
+      max-height: 100px;
+      overflow-y: auto;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+
+    >* {
+      flex: 0 1 auto;
+
+      &:not(:last-of-type) {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+// Theme
+// =============================================
+.idea-card {
+  box-shadow: 0 0 3px rgba(#000, .2);
+  background: #fafafa;
+  opacity: .8;
+  border-radius: 4px;
+  border-left: 8px solid #ddd;
+
+  &__title,
+  &__description,
+  &__dates {
+    span, p {
+      color: #666;
+    }
+  }
+}
+
+// Textarea - input
+// =============================================
+.idea-card {
+  padding: 20px;
+
+  textarea,
+  input {
+    background: rgba(#000, .1);
+    padding: 10px;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  textarea {
+    resize: none;
+  }
+}
+
+// Events
+// =============================================
+.idea-card {
+  &:hover {
+    opacity: 1;
+    background: #fff;
+    box-shadow: 0px 2px 4px rgba(#000, .5);
+  }
+}
+
+// Animations
+// =============================================
+.idea-card {
+  transition-property: opacity background box-shadow;
+  transition-duration: .3s;
+}
